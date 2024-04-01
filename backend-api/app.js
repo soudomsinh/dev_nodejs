@@ -36,7 +36,7 @@ app.post('/register', jsonParser, function (req, res, next) {
                res.json({status: 'error', message: err})
                return
             }
-            res.json({status: 'ok'})
+            res.json({status: 'ok'}) 
          }
       );
    });      
