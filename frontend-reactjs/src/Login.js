@@ -13,11 +13,9 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-
 // TODO remove, this demo shouldn't need to reset the theme.
 
 const defaultTheme = createTheme();
-
 export default function SignInSide() {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -37,7 +35,7 @@ export default function SignInSide() {
       .then(data => {
         if(data.status === 'ok'){
           localStorage.setItem('token', data.token)
-          window.location='/dashboard'
+          window.location='/app'
           alert('Log-in succeeded')
         }else{
           alert('Log-in failed')
@@ -47,6 +45,7 @@ export default function SignInSide() {
         console.error('Error:', error);
     });
   };
+
 
   return (
     <ThemeProvider theme={defaultTheme}>

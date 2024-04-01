@@ -1,9 +1,13 @@
-import Button from '@mui/material/Button';
-
+import Navbar from './Navbar/Navbar';
+import Pricing from './Pricing';
+import Carousel from './Hero/Carousel'
 function App() {
   return (
     <div>
-      <Button variant="contained">Hello world</Button>
+      <Navbar/>
+      <Carousel />
+      <Pricing />
+      
     </div>
   );
 }
